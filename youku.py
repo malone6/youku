@@ -8,7 +8,7 @@ import requests,time,json,re
 class Youku():
 
     def __init__(self):
-        self.url_input = input("粘贴你想解析的优酷视频链接粘贴到此处，如:http://v.youku.com/v_show/id_XMjY0NTU2MTc5Mg==.html,然后按回车键执行！"+'\n'+'>>>')
+        self.url_input = input("粘贴你想解析的优酷视频链接粘贴到此处，如:http://v.youku.com/v_show/id_XMTU3NTkxNDIwMA==.html,然后按回车键执行！"+'\n'+'>>>')
         # 浏览器头
         self.headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
         # cookies中的cna，优酷请求不能禁用cookies，这是我的本地浏览器浏览优酷的cookies，直接复制过来用
@@ -73,4 +73,4 @@ class Youku():
 if __name__ == '__main__':
     youku = Youku()
     youku.get_video_info()
-
+    exit = input('按任意键退出')
